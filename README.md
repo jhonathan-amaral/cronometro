@@ -1,54 +1,93 @@
-##  🎨 Aplicativo Web Elegante (Sugestão) 🎨
+##  ⏱️ Aplicativo de Gerenciamento de Tempo  ⏱️
 
-Este projeto é um aplicativo de cronômetro web moderno construído com React, TypeScript e Vite, com atenção especial à organização, estilo e componentização. 
+Este projeto é uma aplicação web, um gerenciador de tempo e de produtividade, desenvolvido com React, TypeScript e Vite. Ele implementa um sistema de ciclos com histórico e um cronômetro de contagem regressiva.
 
-##  💻 Tecnologias Utilizadas:
+## 💻 Tecnologias Utilizadas:
 
 - React
 - TypeScript
 - Vite
 - ESLint
+- Immer
+- React Hook Form
+- React Router Dom
+- Styled Components
+- Zod
 
 ## 📂 Arquitetura do Projeto
 
 ### 📁 src/
 
-O coração do aplicativo, contendo todo o código-fonte.
+O núcleo do código-fonte da aplicação.
 
-- `App.tsx` 🚀: Componente raiz da aplicação.
-- `Router.tsx` 🧭: Define as rotas e navegação do aplicativo.
-- `main.tsx` 🔌: Ponto de entrada principal, inicializa o React.
-- `components/` 🧱: Componentes reutilizáveis da interface.
-    - `Header/`: Componente de cabeçalho.
-- `layouts/` 📐: Definem o layout geral da aplicação.
-    - `DefaultLayout/`: Layout padrão usado em várias páginas. 
-- `pages/` 📄: Componentes que representam as diferentes páginas do aplicativo.
-    - `Home/`: Página inicial.
-    - `History.tsx`: Página de histórico, possivelmente.
-- `styles/` 💅: Estilos globais e temas.
-    - `global.ts`: Estilos globais.
-    - `themes/`: Definição de temas (ex: claro/escuro).
-- `assets/` 🖼️: Arquivos estáticos, como imagens e ícones.
-    - `Logo.svg`: Logotipo do aplicativo.
-- `utils/` 🧰: Funções utilitárias.
-- `@types/styles.d.ts`: Declarações de tipos para arquivos de estilo.
-- `vite-env.d.ts`: Declarações de tipos para variáveis de ambiente do Vite.
-- `tsconfig.app.json`, `tsconfig.json`, `tsconfig.node.json`: Configurações do TypeScript para diferentes ambientes (aplicativo, geral, Node.js).
-- `vite.config.ts`: Arquivo de configuração principal do Vite. 
+- `main.tsx` 🚀: Ponto de entrada principal da aplicação.
+- `App.tsx`: Componente raiz da aplicação.
+- `Router.tsx`: Define as rotas da aplicação.
+
+#### 📁 components/
+
+Componentes reutilizáveis da interface.
+
+- `Header/`: Componente de cabeçalho.
+- `layouts/`: Definição de layouts para diferentes páginas.
+    - `DefaultLayout/`: Layout padrão da aplicação.
+
+#### 📁 pages/
+
+Páginas da aplicação.
+
+- `Home/`: Página inicial.
+    - `components/`: Componentes específicos da página Home.
+        - `Countdown/`: Componente de contagem regressiva.
+        - `NewCycleForm/`:  Formulário para criar um novo ciclo. 
+- `History/`: Página de histórico de ciclos.
+
+#### 📁 contexts/
+
+Gerenciamento de estado global com Context API.
+
+- `CyclesContext.tsx`: Define o contexto para gerenciar os ciclos.
+
+#### 📁 reducers/
+
+Lógica para atualização do estado global.
+
+- `cycles/`:  Reducer para gerenciar o estado dos ciclos.
+    - `actions.ts`: Define as ações que podem ser despachadas.
+    - `reducer.ts`: Função reducer que atualiza o estado com base nas ações.
+
+#### 📁 styles/
+
+Estilos globais e temas da aplicação.
+
+- `global.ts`: Estilos CSS globais.
+- `themes/`: Definição de temas.
+    - `default.ts`: Tema padrão da aplicação. 
+
+#### 📁 assets/
+
+Arquivos estáticos como imagens.
+
+- `Logo.svg`: Logotipo da aplicação.
 
 ### 📄 Arquivos da raiz
 
-- `.eslintrc.json`, `eslint.config.mjs`: Configurações do ESLint para estilo de código.
-- `.git/`: Pasta do repositório Git, contendo o histórico do projeto.
+- `.eslintrc.json`: Configurações do ESLint para estilo de código.
 - `.gitignore`: Define arquivos e pastas ignorados pelo Git.
-- `.vscode/`: Configurações específicas para o Visual Studio Code.
-- `README.md` 📄: Este arquivo, explicando o projeto! 
-- `index.html`: Arquivo HTML principal, geralmente um container para o React. 
-- `package-lock.json`, `package.json` 📦: Gerenciamento de dependências do projeto.
+- `package-lock.json`, `package.json` 📦: Gerenciamento de dependências.
+- `README.md` 📄: Este arquivo README. 
 
-## Observações Adicionais
+## Detalhes Adicionais:
 
-- A estrutura do projeto indica um cuidado com organização e separação de responsabilidades, o que é uma boa prática em projetos React. 
-- A presença de arquivos de configuração para ESLint, TypeScript e Vite sugere um ambiente de desenvolvimento bem configurado. 
+- O projeto parece utilizar um sistema de gerência de estados global, com Context API, dado o uso de reducers e actions.
+- A estrutura sugere uma atenção especial à organização e separação de responsabilidades, o que é uma boa prática em projetos React.
+
+## Utilização 
+Para utilizar o projeto, você precisará ter o Node.js e o npm instalados em sua máquina
+1. Clone o repositório com o comando `git clone https://github.com/jhonathan-amaral/cronometro.git`
+2. Entre na pasta do projeto com o comando `cd cronometro`
+3. Instale as dependências com o comando `npm install` ou `npm install --force`
+4. Inicie o servidor com o comando `npm run dev`
+5. Acesse o projeto em seu navegador com o endereço `http://localhost:3001`
 
 
