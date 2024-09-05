@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from '../../styles/breakpoints'
 
 export const HomeContainer = styled.main`
   flex: 1;
@@ -12,6 +13,9 @@ export const HomeContainer = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
+  }
+  @media ${devices.sm} {
+    width: 100%;
   }
 `
 

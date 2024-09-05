@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from '../../../../styles/breakpoints'
 
 export const CountDownContainer = styled.div`
   font-family: 'Roboto Mono', monospace;
@@ -13,6 +14,24 @@ export const CountDownContainer = styled.div`
     background: ${(props) => props.theme['gray-700']};
     padding: 2rem 1rem;
     border-radius: 8px;
+    margin-right: 1rem;
+  }
+  div {
+    margin-top: 3rem;
+  }
+  @media ${devices.sm} {
+    flex-direction: column;
+    span {
+      font-size: 5rem;
+      padding: 0.5rem;
+      margin: 5px;
+    }
+    div {
+      margin-top: -20px;
+    }
+    &:nth-last-child(2) {
+      margin-top: -10px;
+    }
   }
 `
 export const Separator = styled.div`
@@ -24,4 +43,8 @@ export const Separator = styled.div`
 
   display: flex;
   justify-content: center;
+
+  @media ${devices.sm} {
+    display: none;
+  }
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+import { devices } from '../../../../styles/breakpoints'
 
 export const FormContainer = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,6 +10,13 @@ export const FormContainer = styled.div`
   font-size: 1.25rem;
   font-weight: bold;
   flex-wrap: wrap;
+  @media ${devices.sm} {
+    margin: 10px 0 -40px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `
 const BaseInput = styled.input`
   background: transparent;
@@ -28,6 +35,9 @@ const BaseInput = styled.input`
 
   &::placeholder {
     color: ${(props) => props.theme['gray-500']};
+  }
+  @media ${devices.sm} {
+    width: 100%;
   }
 `
 export const TaskInput = styled(BaseInput)`

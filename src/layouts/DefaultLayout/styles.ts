@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from '../../styles/breakpoints'
 
 export const LayoutContainer = styled.div`
   max-width: 74rem;
@@ -10,4 +11,9 @@ export const LayoutContainer = styled.div`
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  @media ${devices.sm} {
+    padding: 2.5rem 1rem;
+    margin: 2.5rem 1rem;
+    height: 100%;
+  }
 `
