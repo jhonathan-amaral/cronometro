@@ -2,6 +2,11 @@
 
 Este projeto é uma aplicação web, um gerenciador de tempo e de produtividade, desenvolvido com React, TypeScript e Vite. Ele implementa um sistema de ciclos com histórico e um cronômetro de contagem regressiva.
 
+![Tela inicial da aplicação](assets/inicio.png)
+![Tela aplicação iniciada](assets/tempo_corrido.png)
+![Tela de exibição do historico](assets/historico.png)
+![Aplicação responsiva](assets/mobile.png)
+
 ## 💻 Tecnologias Utilizadas:
 
 - React
